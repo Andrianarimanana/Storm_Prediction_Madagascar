@@ -1,6 +1,6 @@
-# Customer conversion rate prediction
+# Storm prediction in north of Madagascar
 
-Welcome to the **Customer conversion rate prediction** project! This repository provides tools and resources for predicting customer conversion rate based on synthetic dataset in order to help marketing teams in business decision.
+Welcome to the **Storm prediction in north of Madagascar** project! This repository provides tools and resources for predicting thunderstorms in northern Madagascar based on Meteosat Second Generation Data on Cloud-Top Temperature in order to climate risk management.
 
 ## Table of Contents
 
@@ -10,11 +10,21 @@ Welcome to the **Customer conversion rate prediction** project! This repository 
 
 ## Overview
 
-This project helps businesses identify potentiel customer with high conversion probability and enabling more effective marketing strategies cibling.
+The porpuse of this project is a machine learning focused on nowcasting thunderstorms in northern Madagascar, particularly around Nosy Be. By leveraging real-time data, the project aims to provide accurate short-term predictions (0–6 hours) to mitigate risks, protect lives, and support emergency responses in this vulnerable region.
 
 ## Dataset
 
-The dataset used for this project is from Kaggle dataset. The dataset  "Customer Conversion Prediction Dataset" is a synthetic dataset created for the purpose of simulating a customer conversion prediction scenario in order to help stackholder, business decision maker and marketing teams. The dataset contains customer's perfornel information such as age, gender, location and informations about customer interaction with a hypothetical business or website such as lead source, lead status, ect. The dataset is available on [Kaggle](https://www.kaggle.com/datasets/muhammadshahidazeem/customer-conversion-dataset-for-stuffmart-com/data)
+The repository includes data derived from [EUMETSAT](https://www.eumetsat.int/)'s Meteosat Second Generation satellite observations , focusing on cloud-top temperature. Storms are detected in real-time using the 2D-wavelet transform method by [Klein et al. (2018)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2017JD027432), with database creation contributed by [Rakotomanga et al. (2024)](https://eps.leeds.ac.uk/maths/pgr/13569/mendrika-rakotomanga).
+
+Dataset Details:
+
+Inputs: Each row includes observation time (year, month, day, hour, minute), geographic coordinates (latitude and longitude), and storm characteristics (intensity, size, and distance).
+Labels: Training data includes binary labels for storm occurrence predictions at 1-hour (Storm_NosyBe_1h) and 3-hour (Storm_NosyBe_3h) lead times.
+Time Span: Data spans November to April from 2004–2019 for training and 2020–2024 for testing.
+Files in Repository:
+
+train.csv: Contains input features and labels for model training.
+test.csv: Contains input features without labels for model evaluation. 
 
 ## Setup Instructions
 
