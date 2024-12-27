@@ -10,7 +10,7 @@ Welcome to the **Storm prediction in north of Madagascar** project! This reposit
 
 ## Overview
 
-The porpuse of this project is a machine learning focused on nowcasting thunderstorms in northern Madagascar, particularly around Nosy Be. By leveraging real-time data, the project aims to provide accurate short-term predictions (0–6 hours) to mitigate risks, protect lives, and support emergency responses in this vulnerable region.
+The porpuse of this project is a machine learning focused on forcasting thunderstorms in northern Madagascar, particularly around Nosy Be. The project aims to provide accurate short-term predictions (0–6 hours) to mitigate risks, protect lives, and support emergency responses in this vulnerable region.
 
 ## Dataset
 
@@ -62,5 +62,5 @@ To set up this projet using Docker Container
 
 2. Running the docker container:
    ```bash
-   docker run -d -p 5000:5000 predict-app
+      docker run -it --rm -p 9696:9696 predict-app
    
