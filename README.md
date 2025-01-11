@@ -32,7 +32,7 @@ To set up this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repo-name.git
+   git clone https://github.com/Andrianarimanana/Storm_Prediction_Madagascar.git
 
 2. Activate virtual environment (make sure pipenv is already installed):
    ```bash
