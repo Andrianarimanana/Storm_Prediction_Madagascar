@@ -163,6 +163,22 @@ dfulltrain = xgb.DMatrix(X_full_train, label=y1h_full_train,
 dtest = xgb.DMatrix(x_test, label=y1h_test, feature_names=dv.get_feature_names_out)
 print('training the final model')
 
+xgb_params = {
+    'eta': 0.3, 
+    'max_depth': 10,
+    'min_child_weight': 30,
+
+    'objective': 'binary:logistic',
+    'eval_metric': 'auc',
+
+    'nthread': 8,
+    'seed': 1,
+    'verbosity': 1,
+}
+
+model = xgb.train(xgb_params, dfulltrain, num_boost_round=40)
+y_pred = model.predict(dtest)
+roc_auc_score(y1h_test, y_pred)
 # Save the model
 
 with open(output_file, 'wb') as f_out:
