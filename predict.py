@@ -5,7 +5,7 @@ from flask import request
 from flask import jsonify
 
 
-model_file = 'model_C=1.0.bin'
+model_file = 'model_xboost.bin'
 
 with open(model_file, 'rb') as f_in:
     dv, model = pickle.load(f_in)
@@ -18,7 +18,7 @@ def predict():
 
     X = dv.transform([meteo_data])
     y_pred = model.predict_proba(X)[0, 1]
-    storm = y_pred >= 0.5
+    storm = y_pred 
 
     result = {
         # storm_probability
