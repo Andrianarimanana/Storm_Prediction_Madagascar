@@ -21,9 +21,11 @@ from sklearn.tree import export_text
 
 # parameters
 
-C = 1.0
+
+
 # n_splits = 5
-output_file = f'model_C={C}.bin'
+output_file = f'model_xboost.bin'
+#output_file = f'model_C={C}.bin'
 
 
 # data preparation
@@ -132,7 +134,7 @@ for feat in lag_features:
 X = train_df[feature_cols]
 y_1h = train_df['Storm_NosyBe_1h']
 y_3h = train_df['Storm_NosyBe_3h']
-print(f'doing validation with C={C}')
+#print(f'doing validation with C={C}')
 #spilit 
 
 x_full_train, x_test,y1h_full_train, y1h_test= train_test_split(X, y_1h, test_size=0.2, random_state=11)
